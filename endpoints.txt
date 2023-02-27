@@ -1,0 +1,57 @@
+#####
+#
+# Company Endpoints
+#
+#####
+
+# Endpoint to get / update company information
+@app.route('/company/<nit>', methods=['GET', 'POST'])
+@app.route('/company/<nit>/', methods=['GET', 'POST'])
+
+# Endpoint to create a new company
+@app.route('/company/', methods=['POST'])
+
+
+# Endpoint to delete a company
+@app.route('/company/<int:nit>/delete', methods=['POST'])
+
+
+#####
+#
+# Employee Endpoints
+#
+#####
+
+# Read, update
+@app.route('/employee/<int:id>', methods=['GET', 'POST'])
+
+# Endpoint to create a new employee
+@app.route('/employee/', methods=['POST'])
+
+# Endpoint to delete a employee
+@app.route('/employee/<int:identification>/delete', methods=['POST'])
+
+# Endpoint to get employee's company
+@app.route('/employee/<int:identification>/company', methods=['GET'])
+
+# Endpoint for employee age
+@app.route('/employee/<int:identification>/age', methods=['GET'])
+
+# Endpoint for employee loans
+@app.route('/employee/<int:identification>/loans', methods=['GET'])
+
+
+#####
+#
+# Loan Endpoints
+#
+#####
+
+# Read and update loans
+@app.route('/loan/<id>', methods=['GET', 'POST'])
+
+# Endpoint to create a new loan
+@app.route('/loan/', methods=['POST'])
+
+# Endpoint to delete a loan
+@app.route('/loan/<id>/delete', methods=['POST'])

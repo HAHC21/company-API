@@ -1,0 +1,7 @@
+pandas
+requests
+flask
+flask_mongoengine
+mongoengine
+flask_cors
+python-dotenv
